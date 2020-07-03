@@ -1,0 +1,31 @@
+to use logging need to "import logging"
+
+1. describe the name of the "loggind_file" and location to be created
+    file_handler = logging.FileHandler('logfile.log')
+
+2.#create forrmat on the stored messages in the file
+#logging.Formatter("%(time)s :%(type_of_log_msg)s :(file_name)s :%(message)s")
+    formatter = logging.Formatter("%(asctime)s :%(levelname)s FileName: <%(name)s> Message: <%(message)s>")
+
+3. set "file_handler" object with created formatter for the messages
+file_handler.setFormatter(formatter)
+
+4.# this method create object
+#catch the file_name and print it on the log
+    logger = logging.getLogger(__name__)
+
+5. #take the "FileHandler" object like parameter to manipulate it
+    logger.addHandler(file_handler)
+
+6. # set from what level to be print the messages
+    logger.setLevel(logging.INFO)
+7.
+# this is hierarchy of logs printing
+# if the warning is set only steps after it will be printed (error and critical)
+#and first two (debug and info) will be skiped
+
+    logger.debug("A debug statment is execute")
+    logger.info("Information statment")
+    logger.warning("warning msg")
+    logger.error("A major error has ocure")
+    logger.critical("Critical issue")

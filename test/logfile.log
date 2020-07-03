@@ -1,0 +1,7 @@
+2020-07-03 18:01:33,187 =>INFO =>test_creditCard1 =>('one', 'five')
+2020-07-03 18:01:33,218 =>INFO =>test_creditCard1 =>('seven', 'tree')
+2020-07-03 18:01:33,218 =>INFO =>test_creditCard1 =>('seven', 'tree')
+2020-07-03 18:01:33,224 =>INFO =>test_creditCard1 =>('four', 'ten')
+2020-07-03 18:01:33,224 =>INFO =>test_creditCard1 =>('four', 'ten')
+2020-07-03 18:01:33,224 =>INFO =>test_creditCard1 =>('four', 'ten')
+2020-07-03 18:01:33,227 =>INFO =>test_creditCard5 =>Info from creditCard5

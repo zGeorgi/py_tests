@@ -1,0 +1,7 @@
+1.this plug-in need to be install first
+pip install pytest-html
+
+2. The report can be create by adding <--html=report.html> when I run the test_cases
+py.test --html=report.html
+
+3. The report will be located in the same folder as tests

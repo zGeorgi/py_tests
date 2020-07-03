@@ -1,0 +1,45 @@
+1.The pytest filename should always start with "test_" keyword
+
+2.pytest methods need to start with "test_"
+
+def test_first_method():
+    same code...
+
+3.any code should be in method
+4. methods name should be meaningful for what we doing "testcasename"
+5. mark bunch of test_cases with the same "mark" to be execute together
+    import pytest
+    @pytest.mark.<mark_name>
+
+6. Fixtures execute same code before star the actual test_case.
+Is used to set up something(open browser, DB connection) for the real test
+pre-request execute
+
+=> yield is always execute on the end of the test
+@pytest.fixtures()
+def setup():
+    print("fixtures code will be executing first")
+    yield
+    print("'yield' is always execute Last")
+
+def test_fixtures_demo(setup):
+    print("In fixtures demo method")
+
+ 7. Create conftest.py  file that holds  the "fixture".
+ This file is visible for all files in the package.
+
+ 8. For import the fixture in a class and to used from all test_
+ @pytest.mark.usefixtures(<fixture_name>")
+ class <clas_Name>
+
+ 9.To run the fixture only one time before the class and the yield one after all test_cases
+    @pytest.fixture(scope="class")
+
+ 10.# parametrazation in fixtures. way to send parametrize data to test_case by fixture().
+ The test will be execute 3 times because there are tree tuple lists
+ @pytest.fixture(params=[("chrome","georgi"), ("firefox", "dimitrov"), "IE"])
+def crossBrowser(<keyword "request">):
+    return request.param
+
+11. @pytest.mark.skip  => skip from running desire test
+12.8.@pytest.mark.xfail  => run the test but not not mark as pass or fail. dont shows up in report

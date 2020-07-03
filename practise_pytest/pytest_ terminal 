@@ -1,0 +1,14 @@
+go to directory where is the test
+cd <location>
+
+1. py.test  => run all test in the direction
+2. py.test -v  => give more info about tests "metadata"
+3. py.test -v -s => shows the console output as-well
+
+-In Pytest the methods can not be with the same name in the same file. "Overriding"
+ only one of them will be execute
+4. py.test <file_name> -v -s => run only one selected file
+5. py.test -k <testcase_text>  => run test that include this <testcase_text> in it name
+
+6. py.test -m smok -v -s  => run "mark" tests with name smok only
+

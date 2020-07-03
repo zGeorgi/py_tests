@@ -1,0 +1,12 @@
+2020-07-02 11:18:38,837 :INFO FileName :logs.test_loggings :Information statment
+2020-07-02 11:18:38,838 :WARNING FileName :logs.test_loggings :warning msg
+2020-07-02 11:18:38,838 :ERROR FileName :logs.test_loggings :A major error has ocure
+2020-07-02 11:18:38,838 :CRITICAL FileName :logs.test_loggings :Critical issue
+2020-07-02 11:19:23,749 :INFO FileName :logs.test_loggings Message:Information statment
+2020-07-02 11:19:23,749 :WARNING FileName :logs.test_loggings Message:warning msg
+2020-07-02 11:19:23,750 :ERROR FileName :logs.test_loggings Message:A major error has ocure
+2020-07-02 11:19:23,750 :CRITICAL FileName :logs.test_loggings Message:Critical issue
+2020-07-02 11:20:05,974 :INFO FileName <:logs.test_loggings> Message: <Information statment>
+2020-07-02 11:20:05,974 :WARNING FileName <:logs.test_loggings> Message: <warning msg>
+2020-07-02 11:20:05,974 :ERROR FileName <:logs.test_loggings> Message: <A major error has ocure>
+2020-07-02 11:20:05,974 :CRITICAL FileName <:logs.test_loggings> Message: <Critical issue>
