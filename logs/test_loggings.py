@@ -1,9 +1,11 @@
+import inspect
 import logging
 
 def test_loggingsDemo():
 # this method create object
 #catch the file_name and print it on the log
-    logger = logging.getLogger(__name__)
+    log_name = inspect.stack()[1][3] #test case name
+    logger = logging.getLogger(log_name)  # or current filename __name__
 
 # describe the name of the loggind_file and location to be created
     file_handler = logging.FileHandler('logfile.log')

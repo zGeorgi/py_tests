@@ -1,17 +1,14 @@
+# send multi data, scope,
 import pytest
 
 
-@pytest.fixture(scope="class")
-def setup():
-    print("Invoke setup fixture")
-    yield
-    print("Setup fixture invoke after the test")
-
-
-@pytest.fixture(params=[("one","five"), ("seven", "tree"), ("four","ten"), ])
-def stream_data(request):
-    return request.param
-
 @pytest.fixture()
-def sauna():
-    print("ganz normal sauna club")
+def setup():
+    print("fixture Setup Browser!")
+    yield
+    print("Yield execute Last!")
+
+
+@pytest.fixture(params=[("georgi", "dimitrov"), ("firefox", "Mozila"), (23, 56)])
+def loading_data(request):
+    return request.param
